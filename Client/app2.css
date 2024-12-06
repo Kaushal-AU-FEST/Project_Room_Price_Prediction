@@ -1,0 +1,229 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background Image Styling */
+.img {
+    background: url('https://wallpaperaccess.com/full/1700233.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* Title Styling */
+.title {
+    text-align: center;
+    margin-bottom: 20px; 
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    background: rgba(255, 255, 255, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    animation: fadeIn 1s ease-in-out;
+    backdrop-filter: blur(10px); /* Adds a frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
+
+.title h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.title p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-left: 15px;
+}/* Form Container with Transparent Background */
+.form {
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    animation: fadeIn 1s ease-in-out;
+    backdrop-filter: blur(10px); /* Adds a frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
+
+/* Icon Container Styling */
+.icon-container {
+    display: inline-block;
+    margin-bottom: 20px;
+    perspective: 1000px; /* Adds 3D perspective */
+}
+
+.icon-container i {
+    font-size: 3rem; /* Adjust the size as needed */
+    color: #4facfe;
+    transition: transform 1s ease, color 0.3s ease;
+    transform-style: preserve-3d; /* Preserves 3D transformations */
+}
+
+/* Rotate Effect on Hover */
+.icon-container i:hover {
+    transform: rotateY(360deg); /* Rotates the icon on the Y-axis */
+    color: #00f2fe; /* Changes color on hover */
+}
+
+/* Position the Icon Above the Title */
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Unified Form Layout */
+form {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Input Styling */
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+.area, .location {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 76%;
+    border: 0;
+    margin: 0 0 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 35px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.area:focus, .location:focus {
+    background: #e8e8e8;
+    transform: scale(1.05);
+    border-color: #009688;
+}
+/* Switch Field Radio Buttons */
+.switch-field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.switch-field input[type="radio"] {
+    display: none;
+    /* new */
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+    /* new */
+}
+
+.switch-field label {
+    background: #e0e0e0;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    /* new */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease-in-out;
+    /* new */
+}
+
+.switch-field input[type="radio"]:checked + label {
+    background: #4facfe;
+    color: white;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.switch-field label:hover {
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    width: 100%;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Animation for Form */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estimated Price Result Styling */
+.result {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
